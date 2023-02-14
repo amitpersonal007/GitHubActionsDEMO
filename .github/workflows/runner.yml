@@ -5,12 +5,11 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Run Script
       run: |
-       
         echo "Calling Shell Script of testsigma"
         pwd
         ls -la
