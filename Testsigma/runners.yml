@@ -13,5 +13,5 @@ jobs:
         echo "Calling Shell Script of testsigma"
         pwd
         ls -la
-        chmod a+x /Users/amits/Desktop/script.sh
+        chmod a+x ./Users/amits/Desktop/script.sh
         .script.sh
