@@ -10,5 +10,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run Script
       run: |
-        chmod +x ./path/to/script.sh
-        ./path/to/script.sh
+        chmod +x ./shscript.sh
+        ./shscript.sh
