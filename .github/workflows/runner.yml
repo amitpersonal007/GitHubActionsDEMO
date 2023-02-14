@@ -13,5 +13,6 @@ jobs:
         echo "Calling Shell Script of testsigma"
         pwd
         ls -la
+        cd ${{ github.workspace }}/workflows
         chmod a+x script.sh
         .script.sh
