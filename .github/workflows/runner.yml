@@ -14,5 +14,5 @@ jobs:
         echo "Calling Shell Script of testsigma"
         pwd
         ls -la
-        chmod a+x ./shscript.sh
-        ./shscript.sh
+        chmod a+x .github/workflows/shscript.sh
+        .shscript.sh
