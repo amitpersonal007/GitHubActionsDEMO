@@ -10,5 +10,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: Run Script
       run: |
-        chmod +x ./shscript.sh
+       
+        echo "Calling Shell Script of testsigma"
+        pwd
+        ls -la
+        chmod a+x ./shscript.sh
         ./shscript.sh
