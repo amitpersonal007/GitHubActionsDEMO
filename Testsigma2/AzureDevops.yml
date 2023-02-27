@@ -1,20 +1,21 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-trigger:- master
-pool:  
-vmImage: 'ubuntu-latest'
-steps:- 
-script: echo Hello, world!  
-displayName: 'Run a one-line script'
-//Settings
-- task: Bash@3 
- inputs:    
-filePath: '/Users/amitsavyasachi/Desktop/cicd.sh' //Generic Shell Script file
-//Settings
-- task: PublishTestResults@2  
-displayName: 'publish testsigma test results'  
-inputs:    
-testResultsFormat: 'Junit'// Test Result Format   
-testResultsFiles: '**/junit-report.xml' //Result File Type
+# This is an example YAML script for triggering a shell script in an Azure DevOps pipeline
+
+trigger:
+  # Define your trigger condition here
+  # For example, you can trigger the pipeline when code is pushed to a specific branch
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+  # Checkout the code from your repository
+  - checkout: self
+
+  # Run your shell script
+  - script: |
+      chmod +x /Users/amitsavyasachi/Desktop/cicd.sh
+      ./cicd.sh
+
